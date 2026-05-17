@@ -29,11 +29,17 @@ p {
 
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 
-    padding: 10px 8vw;
+    margin: 20px auto;
+    padding: 12px 22px;
+    max-width: 900px;
+    border: 2px solid rgb(91, 170, 35);
+    border-radius: 18px;
+    background: rgba(91, 170, 35, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .navbar a {
@@ -41,6 +47,16 @@ p {
     color: rgb(91, 170, 35);
     font-size: 22px;
     font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar a:hover,
+.dropdown-menu a:hover {
+    background: rgba(91, 170, 35, 0.15);
+    color: rgb(59, 115, 23);
+    transform: translateY(-1px);
 }
 
 /* ===== DROPDOWN ===== */
@@ -74,7 +90,16 @@ p {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px 20px;
-    text-align: left;
+    text-align: center;
+    font-size: 10px;
+}
+
+.page h1 {
+    font-size: 70px;
+    text-decoration: underline;
+    text-decoration-color: rgb(91, 170, 35);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 20px;
 }
 
 .page__content {
@@ -97,4 +122,67 @@ p {
 
 .ig-link img:hover {
     transform: scale(1.15);
+}
+.ig-linkk {
+    font-size: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(91, 170, 35);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.ig-linkk:hover {
+    background: rgba(91, 170, 35, 0.12);
+    color: rgb(59, 115, 23);
+    transform: translateY(-1px);
+}
+
+.contact-column {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+}
+
+.contact-column a {
+    width: fit-content;
+}
+
+/* Styling pro vložené iglogo.png */
+.ig-logo {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 0;
+    transition: transform 0.2s ease;
+}
+
+.ig-linkk {
+    margin-bottom: 0;
+}
+
+.email {
+    font-size: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(91, 170, 35);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.email p {
+    margin: 0;
+}
+.email:hover {
+    background: rgba(91, 170, 35, 0.12);
+    color: rgb(59, 115, 23);
+    transform: translateY(-1px);
 }
