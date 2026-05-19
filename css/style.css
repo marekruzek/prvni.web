@@ -5,23 +5,30 @@ body {
     margin: 0;
 }
 
+/* ===== reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* ===== TEXT ===== */
 
 h1 {
     color: rgb(91, 170, 35);
+    font-size: clamp(40px, 6vw, 80px);
     text-shadow: 0 0 8px rgba(125, 189, 79, 0.2);
-    font-size: 80px;
 }
 
 h2 {
     color: rgb(91, 170, 35);
-    font-size: 40px;
-    text-shadow: 0 0 6px rgba(125, 189, 79, 0.15);
+    font-size: clamp(22px, 3vw, 40px);
 }
 
 p {
     color: rgb(91, 170, 35);
-    font-size: 28px;
+    font-size: clamp(16px, 2vw, 28px);
     line-height: 1.6;
 }
 
@@ -32,10 +39,12 @@ p {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    flex-wrap: wrap;
 
     margin: 20px auto;
     padding: 12px 22px;
     max-width: 900px;
+
     border: 2px solid rgb(91, 170, 35);
     border-radius: 18px;
     background: rgba(91, 170, 35, 0.08);
@@ -153,7 +162,8 @@ p {
     width: fit-content;
 }
 
-/* Styling pro vložené iglogo.png */
+/* Styling pro ig logo a email */
+
 .ig-logo {
     width: 40px;
     height: 40px;
@@ -185,4 +195,63 @@ p {
     background: rgba(91, 170, 35, 0.12);
     color: rgb(59, 115, 23);
     transform: translateY(-1px);
+}
+
+/* login box */
+
+.login-box input {
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid rgb(91, 170, 35);
+}
+
+.login-box button {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgb(91, 170, 35);
+    color: white;
+    cursor: pointer;
+}
+.login-box button:hover {
+    background: rgb(59, 115, 23);
+}
+.login-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    background: rgba(91, 170, 35, 0.12);
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid rgb(91, 170, 35);
+}
+
+/* mobilní verze */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .login-box {
+        position: static;
+        margin: 10px auto;
+        justify-content: center;
+    }
+
+    .page {
+        padding: 20px 10px;
+    }
+
 }
