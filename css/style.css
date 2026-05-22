@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 
 * {
     margin: 0;
@@ -14,11 +12,10 @@ body {
     text-align: center;
 }
 
-/* =========================
-   TEXT (MOBILE BASE)
-========================= */
+/* TEXT */
 
 h1 {
+    margin: 30px 0;
     color: rgb(91, 170, 35);
     font-size: clamp(36px, 7vw, 70px);
     text-shadow: 0 0 8px rgba(125, 189, 79, 0.2);
@@ -35,18 +32,14 @@ p {
     line-height: 1.6;
 }
 
-/* =========================
-   NAVBAR (BASE = MOBILE)
-========================= */
+/* NAVBAR */
 
 .navbar {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 12px 22px;
     max-width: 900px;
 
@@ -73,9 +66,7 @@ p {
     transform: translateY(-1px);
 }
 
-/* =========================
-   DROPDOWN
-========================= */
+/* DROPDOWN */
 
 .dropdown {
     position: relative;
@@ -99,9 +90,28 @@ p {
     display: flex;
 }
 
-/* =========================
-   PAGE (MOBILE BASE)
-========================= */
+/* TOPBAR LAYOUT */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+}
+
+/* ICONS RIGHT SIDE */
+
+.icons-right {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} 
+/* PAGE */
 
 .page {
     max-width: 800px;
@@ -122,125 +132,152 @@ p {
     margin-top: 50px;
 }
 
-/* =========================
-   INSTAGRAM / CONTACT (BEZ ZMĚN)
-========================= */
+/* KONTAKT CONTAINER */
 
-.ig-link {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 30px;
+    text-align: center;
 }
 
-.ig-link img {
-    width: 45px;
-    height: 45px;
+/* IG CONTACT (TEXT + ICON) */
+
+.ig-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: rgb(91, 170, 35);
+    font-size: 22px;
+
     transition: 0.2s;
 }
 
-.ig-link img:hover {
-    transform: scale(1.15);
-}
-
-.ig-linkk {
-    font-size: 25px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: rgb(91, 170, 35);
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 10px;
-    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
-}
-
-.ig-linkk:hover {
-    background: rgba(91, 170, 35, 0.12);
+.ig-contact:hover {
     color: rgb(59, 115, 23);
-    transform: translateY(-1px);
 }
 
-.contact-column {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    margin-top: 18px;
+.ig-contact:hover .ig-icon {
+    transform: scale(1.2);
 }
 
-.ig-logo {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    transition: transform 0.2s ease;
+/* IG ICON (HEADER VERSION) */
+
+.ig-icon {
+    font-size: 40px !important;
+    color: rgb(91, 170, 35);
+    transition: 0.2s;
 }
+
+.ig-link:hover .ig-icon {
+    transform: scale(1.15);
+    color: rgb(59, 115, 23);
+}
+
+/* EMAIL */
 
 .email {
-    font-size: 25px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: rgb(91, 170, 35);
+    gap: 10px;
+
     text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 10px;
-    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    color: rgb(91, 170, 35);
+    font-size: 18px;
+
+    transition: 0.2s;
 }
 
 .email:hover {
-    background: rgba(91, 170, 35, 0.12);
     color: rgb(59, 115, 23);
-    transform: translateY(-1px);
 }
 
-/* =========================
-   LOGIN BOX (MOBILE BASE)
-========================= */
+.email-icon {
+    font-size: 22px;
+    transition: 0.2s;
+}
 
-.login-box {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
+.email:hover .email-icon {
+    transform: scale(1.2);
+}
 
-    position: static;
-    margin: 20px auto;
+/* LOGIN DROPDOWN */
 
-    width: 90%;
-    max-width: 300px;
+.login-dropdown {
+    position: relative;
+}
 
-    background: rgba(91, 170, 35, 0.12);
+/* USER ICON */
+
+.user-icon {
+    font-size: 40px !important;
+    color: rgb(91, 170, 35);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.user-icon:hover {
+    transform: scale(1.1);
+}
+
+/* LOGIN MENU */
+
+.login-menu {
+    display: none;
+
+    position: absolute;
+    top: 45px;
+    right: 0;
+
+    width: 250px;
+
     padding: 15px;
-    border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    background: white;
     border: 2px solid rgb(91, 170, 35);
+    border-radius: 18px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    flex-direction: column;
+    gap: 10px;
 }
 
-.login-box input,
-.login-box button {
-    width: 100%;
-    padding: 6px;
+.login-dropdown:hover .login-menu {
+    display: flex;
+}
+
+/* INPUTS */
+
+.login-menu input {
+    padding: 8px;
     border-radius: 8px;
-}
-
-.login-box input {
     border: 1px solid rgb(91, 170, 35);
 }
 
-.login-box button {
+/* BUTTON */
+
+.login-menu button {
+    padding: 8px;
     border: none;
+    border-radius: 8px;
+
     background: rgb(91, 170, 35);
     color: white;
+
     cursor: pointer;
 }
 
-.login-box button:hover {
+.login-menu button:hover {
     background: rgb(59, 115, 23);
 }
 
-/* =========================
-   TABLET (iPad)
-========================= */
+/* TABLET */
 
 @media (min-width: 768px) {
 
@@ -254,9 +291,7 @@ p {
     }
 }
 
-/* =========================
-   DESKTOP
-========================= */
+/* DESKTOP */
 
 @media (min-width: 1024px) {
 
@@ -272,9 +307,7 @@ p {
     }
 }
 
-/* =========================
-   LARGE DESKTOP
-========================= */
+/* LARGE DESKTOP */
 
 @media (min-width: 1200px) {
 
